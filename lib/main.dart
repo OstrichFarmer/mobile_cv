@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_cv/google_navigation.dart';
-import 'package:mobile_cv/screens/experience_screen.dart';
 
 void main() {
   runApp(const MyApp());

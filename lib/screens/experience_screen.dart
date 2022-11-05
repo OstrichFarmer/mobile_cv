@@ -11,7 +11,7 @@ class ExperienceScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.lightGrey,
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
+        //leading: const Icon(Icons.arrow_back),
         centerTitle: true,
         title: Text(
           'Experience',
@@ -66,7 +66,7 @@ class ExperienceScreen extends StatelessWidget {
                                   ),
                                 )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -84,12 +84,12 @@ class ExperienceScreen extends StatelessWidget {
                               const Text(
                                 'Flutter Mobile Developer',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 16),
+                                    fontWeight: FontWeight.w400, fontSize: 16),
                               ),
                               const Text(
                                 'TechTink Solutions Ltd, Abuja',
                                 style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.w500),
+                                    fontSize: 14, fontWeight: FontWeight.w400),
                               ),
                               Text(
                                 'July 2022 - Date | 4 months',
@@ -117,15 +117,15 @@ class ExperienceScreen extends StatelessWidget {
                               const Text(
                                 'Chief Product Officer',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 16),
+                                    fontWeight: FontWeight.w400, fontSize: 16),
                               ),
                               const Text(
                                 'ParkWell Africa, Lagos',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 14),
+                                    fontWeight: FontWeight.w400, fontSize: 14),
                               ),
                               Text(
-                                'Nov 2021 - April 2022| 5 months',
+                                'Nov 2021 - April 2022 | 5 months',
                                 style: TextStyle(color: Colors.grey.shade700),
                               )
                             ],
@@ -147,15 +147,15 @@ class ExperienceScreen extends StatelessWidget {
                               const Text(
                                 'Flutter Mobile Developer',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 16),
+                                    fontWeight: FontWeight.w400, fontSize: 16),
                               ),
                               const Text(
                                 'Kwikpay Credit, Lagos',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 14),
+                                    fontWeight: FontWeight.w400, fontSize: 14),
                               ),
                               Text(
-                                'Aug 2022 - Nov 2021',
+                                'Aug 2022 - Nov 2021| 3.5 months',
                                 style: TextStyle(color: Colors.grey.shade700),
                               )
                             ],
@@ -165,6 +165,15 @@ class ExperienceScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Text(
+                "I like to build products that empower people and make their jobs/lives easier. That's my whole mantra, if I'm not helping someone being more productive then I'm working on the wrong project. I couldn't care less for line-of-business applications. Those are nice and might impact the bottom line of the company, but unless these applications make someone's life easier I have little motivation on working on such an application.",
+                style:
+                    GoogleFonts.lato(fontSize: 16, color: Colors.grey.shade600),
+                textAlign: TextAlign.justify,
               )
             ],
           ),

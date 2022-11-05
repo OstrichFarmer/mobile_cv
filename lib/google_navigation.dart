@@ -14,18 +14,18 @@ class GoogleNavBar extends StatefulWidget {
 }
 
 class _GoogleNavBarState extends State<GoogleNavBar> {
-  @override
   int _selectIndex = 0;
 
-  static final List<Widget> _NavScreen = <Widget>[
+  static final List<Widget> _navScreen = <Widget>[
     const ProfileScreen(),
     const EducationScreen(),
     const ExperienceScreen(),
   ];
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _NavScreen.elementAt(_selectIndex),
+      body: _navScreen.elementAt(_selectIndex),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
             color: AppColors.prussianBlue,
