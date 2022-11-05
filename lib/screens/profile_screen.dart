@@ -150,7 +150,7 @@ class ProfileScreen extends StatelessWidget {
                   children: [
                     const Icon(Icons.calendar_month),
                     Text(
-                      'February 29, 1996',
+                      'Feb. 29, 1996',
                       style: kAboutTextStyling,
                     ),
                   ],
@@ -176,7 +176,7 @@ class ProfileScreen extends StatelessWidget {
                   children: [
                     const Icon(Icons.home),
                     Text(
-                      'Abuja, Nigeria',
+                      'Abuja, Nig.',
                       style: kAboutTextStyling,
                     ),
                   ],
@@ -186,6 +186,7 @@ class ProfileScreen extends StatelessWidget {
                     const Icon(Icons.mail),
                     Text(
                       'Joel.stephen56.sj@gmail.com',
+                      overflow: TextOverflow.ellipsis,
                       style: kAboutTextStyling,
                     ),
                   ],

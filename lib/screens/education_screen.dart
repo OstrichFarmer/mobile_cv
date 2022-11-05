@@ -74,16 +74,17 @@ class EducationScreen extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      ListView(
                         children: const [
                           Text(
                             'Federal University of Technology Akure',
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                                 fontWeight: FontWeight.w400, fontSize: 16),
                           ),
                           Text(
                             'Remote Sensing & GIS',
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                                 fontSize: 14, fontWeight: FontWeight.w400),
                           ),
@@ -144,8 +145,7 @@ class EducationScreen extends StatelessWidget {
               margin: const EdgeInsets.all(10),
               height: MediaQuery.of(context).size.height * 0.45,
               width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: ListView(
                 children: [
                   const Text(
                     'Skills',
