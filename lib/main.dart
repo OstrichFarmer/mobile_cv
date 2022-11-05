@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_cv/google_navigation.dart';
 import 'package:mobile_cv/screens/experience_screen.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ExperienceScreen(),
+      home: const GoogleNavBar(),
     );
   }
 }
