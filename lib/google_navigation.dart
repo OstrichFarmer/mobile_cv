@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:mobile_cv/screens/education_screen.dart';
 import 'package:mobile_cv/screens/experience_screen.dart';
+import 'package:mobile_cv/screens/language_screen.dart';
 import 'package:mobile_cv/screens/profile_screen.dart';
 import 'package:mobile_cv/utils/colors.dart';
 
@@ -20,6 +21,7 @@ class _GoogleNavBarState extends State<GoogleNavBar> {
     const ProfileScreen(),
     const EducationScreen(),
     const ExperienceScreen(),
+    const LanguageScreen()
   ];
 
   @override
@@ -61,6 +63,11 @@ class _GoogleNavBarState extends State<GoogleNavBar> {
               GButton(
                 icon: Icons.work,
                 text: 'Experience',
+                iconColor: Colors.white,
+              ),
+              GButton(
+                icon: Icons.language,
+                text: 'Languages',
                 iconColor: Colors.white,
               )
             ],
