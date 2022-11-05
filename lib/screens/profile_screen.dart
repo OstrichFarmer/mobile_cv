@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_cv/utils/colors.dart';
 import 'package:mobile_cv/utils/constants.dart';
+import 'package:mobile_cv/widget/change_theme_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -57,14 +58,7 @@ class ProfileScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        InkWell(
-                          onTap: () {},
-                          child: const Icon(
-                            Icons.light_mode,
-                            size: 30,
-                            color: Colors.white,
-                          ),
-                        ),
+                        ChangeThemeButtonWidget(),
                         const SizedBox(
                           width: 20,
                         )
@@ -98,14 +92,7 @@ class ProfileScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        InkWell(
-                          onTap: () {},
-                          child: const Icon(
-                            Icons.light_mode,
-                            size: 30,
-                            color: Colors.white,
-                          ),
-                        ),
+                        ChangeThemeButtonWidget(),
                         const SizedBox(
                           width: 20,
                         )
