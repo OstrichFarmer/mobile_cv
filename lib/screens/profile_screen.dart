@@ -3,16 +3,47 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_cv/utils/colors.dart';
 import 'package:mobile_cv/utils/constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
+  twitter() async {
+    const url = 'https://twitter.com/Ostrich_Farmer'; // or add your URL here
+    if (!await launchUrl(Uri.parse(url), mode: LaunchMode.platformDefault)) {
+      throw 'Could not launch $url';
+    }
+  }
+
+  linkedin() async {
+    const url =
+        'https://www.linkedin.com/in/stephen-joel56'; // or add your URL here
+    if (!await launchUrl(Uri.parse(url), mode: LaunchMode.platformDefault)) {
+      throw 'Could not launch $url';
+    }
+  }
+
+  github() async {
+    const url = 'https://github.com/OstrichFarmer'; // or add your URL here
+    if (!await launchUrl(Uri.parse(url), mode: LaunchMode.platformDefault)) {
+      throw 'Could not launch $url';
+    }
+  }
+
+  facebook() async {
+    const url = 'https://web.facebook.com/joel.stephen2';
+
+    /// or add your URL here
+    if (!await launchUrl(Uri.parse(url), mode: LaunchMode.platformDefault)) {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.lightGrey,
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(240),
+          preferredSize: const Size.fromHeight(240),
           child: Stack(
             children: [
               Container(
@@ -93,7 +124,7 @@ class ProfileScreen extends StatelessWidget {
                   children: [
                     const Icon(Icons.phone),
                     Text(
-                      '+2348134403016',
+                      '+(234) 813 440 3016',
                       style: kAboutTextStyling,
                     ),
                   ],
@@ -132,6 +163,62 @@ class ProfileScreen extends StatelessWidget {
             const Divider(
               height: 12,
               thickness: 2,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text(
+              "Diligent software engineer with 4 years of experience in commercial application and software development, constantly seeking innovative solutions to everyday problems. In previous roles, slashed downtime by 15% and ensured 90% on-time project completion. I have honed my analytical thinking and collaboration skills. Have been an Engineering Lead for 5 projects, committed to mobile system development, and leading mobile development teams. An expert in GIS, JavaScript, Remote Sensing, HTML, Flutter, Python and Dart.",
+              style: TextStyle(fontSize: 17),
+              textAlign: TextAlign.justify,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    twitter();
+                  },
+                  icon: const Icon(FontAwesomeIcons.twitter),
+                  iconSize: 30,
+                  color: Colors.blue,
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                IconButton(
+                  onPressed: () {
+                    facebook();
+                  },
+                  icon: const Icon(FontAwesomeIcons.facebook),
+                  iconSize: 30,
+                  color: Colors.blue,
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                IconButton(
+                  onPressed: () {
+                    linkedin();
+                  },
+                  icon: const Icon(FontAwesomeIcons.linkedin),
+                  iconSize: 30,
+                  color: Colors.blue,
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                IconButton(
+                    onPressed: () {
+                      github();
+                    },
+                    icon: const Icon(FontAwesomeIcons.github),
+                    iconSize: 30,
+                    color: Colors.blue),
+              ],
             )
           ],
         ),

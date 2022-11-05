@@ -40,8 +40,8 @@ class EducationScreen extends StatelessWidget {
               margin: const EdgeInsets.all(10),
               height: MediaQuery.of(context).size.height * 0.20,
               width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: ListView(
+                // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     'Education',
@@ -76,20 +76,19 @@ class EducationScreen extends StatelessWidget {
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             'Federal University of Technology Akure',
                             style: TextStyle(
                                 fontWeight: FontWeight.w400, fontSize: 16),
                           ),
-                          const Text(
+                          Text(
                             'Remote Sensing & GIS',
                             style: TextStyle(
                                 fontSize: 14, fontWeight: FontWeight.w400),
                           ),
                           Text(
                             'Nov 2015 - Oct 2021',
-                            style: TextStyle(color: Colors.grey.shade700),
                           )
                         ],
                       )
@@ -109,20 +108,19 @@ class EducationScreen extends StatelessWidget {
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             'Google Africa Developers Scholarship',
                             style: TextStyle(
                                 fontWeight: FontWeight.w400, fontSize: 16),
                           ),
-                          const Text(
+                          Text(
                             'Web Specialist',
                             style: TextStyle(
                                 fontWeight: FontWeight.w400, fontSize: 14),
                           ),
                           Text(
                             'April 2021 - Sept 2021 | 5 months',
-                            style: TextStyle(color: Colors.grey.shade700),
                           )
                         ],
                       )
