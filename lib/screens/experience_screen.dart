@@ -15,9 +15,9 @@ class ExperienceScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           'Experience',
-          style: GoogleFonts.lato(fontSize: 22, fontWeight: FontWeight.w600),
+          style: GoogleFonts.lato(fontSize: 25, fontWeight: FontWeight.w600),
         ),
-        toolbarHeight: 100,
+        toolbarHeight: 70,
         backgroundColor: AppColors.prussianBlue,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -41,10 +41,10 @@ class ExperienceScreen extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(12))),
                 child: Container(
                   margin: const EdgeInsets.all(10),
-                  height: 200,
+                  height: 220,
                   width: double.infinity,
-                  child: ListView(
-                    //crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
                         'Work Experience',
@@ -157,9 +157,9 @@ class ExperienceScreen extends StatelessWidget {
                               Text(
                                 'Aug 2022 - Nov 2021| 3.5 months',
                                 style: TextStyle(color: Colors.grey.shade700),
-                              )
+                              ),
                             ],
-                          )
+                          ),
                         ],
                       )
                     ],

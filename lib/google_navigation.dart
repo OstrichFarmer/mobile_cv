@@ -38,7 +38,7 @@ class _GoogleNavBarState extends State<GoogleNavBar> {
             backgroundColor: AppColors.prussianBlue,
             activeColor: AppColors.prussianBlue,
             tabBackgroundColor: AppColors.lightGrey,
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
             tabMargin: const EdgeInsets.all(5),
             gap: 9,
             selectedIndex: _selectIndex,
