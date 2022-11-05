@@ -7,5 +7,5 @@ final kExperiencetagTextStyle = GoogleFonts.aclonica(
   color: AppColors.prussianBlue,
 );
 
-final kAboutTextStyling = GoogleFonts.lato(
-    color: Colors.grey, fontWeight: FontWeight.w400, fontSize: 16);
+final kAboutTextStyling =
+    GoogleFonts.lato(fontWeight: FontWeight.w400, fontSize: 16);

@@ -120,11 +120,14 @@ class ProfileScreen extends StatelessWidget {
         ),
         child: ListView(
           children: [
+            const SizedBox(
+              height: 5,
+            ),
             Center(
               child: Text(
-                'Joel Ugwa',
+                'Joel Ugwa N.',
                 style: GoogleFonts.aclonica(
-                    fontSize: 20, fontWeight: FontWeight.w500),
+                    fontSize: 22, fontWeight: FontWeight.w500),
               ),
             ),
             Center(
@@ -133,6 +136,9 @@ class ProfileScreen extends StatelessWidget {
                 style:
                     GoogleFonts.lato(fontSize: 18, fontWeight: FontWeight.w500),
               ),
+            ),
+            const Center(
+              child: Text('Slack username: ostrich.farmer.56'),
             ),
             const SizedBox(
               height: 15,
