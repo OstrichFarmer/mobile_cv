@@ -10,22 +10,21 @@ class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
   twitter() async {
-    const url = 'https://twitter.com/Ostrich_Farmer'; // or add your URL here
+    const url = 'https://twitter.com/Ostrich_Farmer';
     if (!await launchUrl(Uri.parse(url), mode: LaunchMode.platformDefault)) {
       throw 'Could not launch $url';
     }
   }
 
   linkedin() async {
-    const url =
-        'https://www.linkedin.com/in/stephen-joel56'; // or add your URL here
+    const url = 'https://www.linkedin.com/in/stephen-joel56';
     if (!await launchUrl(Uri.parse(url), mode: LaunchMode.platformDefault)) {
       throw 'Could not launch $url';
     }
   }
 
   github() async {
-    const url = 'https://github.com/OstrichFarmer'; // or add your URL here
+    const url = 'https://github.com/OstrichFarmer';
     if (!await launchUrl(Uri.parse(url), mode: LaunchMode.platformDefault)) {
       throw 'Could not launch $url';
     }
@@ -34,7 +33,6 @@ class ProfileScreen extends StatelessWidget {
   facebook() async {
     const url = 'https://web.facebook.com/joel.stephen2';
 
-    /// or add your URL here
     if (!await launchUrl(Uri.parse(url), mode: LaunchMode.platformDefault)) {
       throw 'Could not launch $url';
     }
@@ -215,7 +213,6 @@ class ProfileScreen extends StatelessWidget {
                   },
                   icon: const Icon(FontAwesomeIcons.twitter),
                   iconSize: 30,
-                  color: Colors.blue,
                 ),
                 const SizedBox(
                   width: 10,
@@ -226,7 +223,6 @@ class ProfileScreen extends StatelessWidget {
                   },
                   icon: const Icon(FontAwesomeIcons.facebook),
                   iconSize: 30,
-                  color: Colors.blue,
                 ),
                 const SizedBox(
                   width: 10,
@@ -237,18 +233,17 @@ class ProfileScreen extends StatelessWidget {
                   },
                   icon: const Icon(FontAwesomeIcons.linkedin),
                   iconSize: 30,
-                  color: Colors.blue,
                 ),
                 const SizedBox(
                   width: 10,
                 ),
                 IconButton(
-                    onPressed: () {
-                      github();
-                    },
-                    icon: const Icon(FontAwesomeIcons.github),
-                    iconSize: 30,
-                    color: Colors.blue),
+                  onPressed: () {
+                    github();
+                  },
+                  icon: const Icon(FontAwesomeIcons.github),
+                  iconSize: 30,
+                ),
               ],
             )
           ],
