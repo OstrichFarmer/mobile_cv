@@ -50,15 +50,18 @@ class _GoogleNavBarState extends State<GoogleNavBar> {
             tabs: const [
               GButton(
                 icon: FontAwesomeIcons.solidUser,
+                iconColor: Colors.white,
                 text: 'Profile',
               ),
               GButton(
                 icon: FontAwesomeIcons.book,
                 text: 'Education',
+                iconColor: Colors.white,
               ),
               GButton(
                 icon: Icons.work,
                 text: 'Experience',
+                iconColor: Colors.white,
               )
             ],
           ),
