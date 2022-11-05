@@ -41,47 +41,91 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final deviceOrientation = MediaQuery.of(context).orientation;
     return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(240),
-          child: Stack(
-            children: [
-              Container(
-                height: 165,
-                color: AppColors.prussianBlue,
-              ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: const Icon(
-                        Icons.light_mode,
-                        size: 30,
-                        color: Colors.white,
+      appBar: deviceOrientation == Orientation.portrait
+          ? PreferredSize(
+              preferredSize: const Size.fromHeight(240),
+              child: Stack(
+                children: [
+                  Container(
+                    height: 165,
+                    color: AppColors.prussianBlue,
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        InkWell(
+                          onTap: () {},
+                          child: const Icon(
+                            Icons.light_mode,
+                            size: 30,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 20,
+                        )
+                      ],
+                    ),
+                  ),
+                  const Align(
+                    alignment: Alignment.bottomCenter,
+                    child: CircleAvatar(
+                      radius: 100,
+                      backgroundColor: Colors.white,
+                      child: CircleAvatar(
+                        backgroundImage:
+                            AssetImage('assets/images/profile.jpg'),
+                        radius: 90,
                       ),
                     ),
-                    const SizedBox(
-                      width: 20,
-                    )
-                  ],
-                ),
-              ),
-              const Align(
-                alignment: Alignment.bottomCenter,
-                child: CircleAvatar(
-                  radius: 100,
-                  backgroundColor: Colors.white,
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/profile.jpg'),
-                    radius: 90,
                   ),
-                ),
-              ),
-            ],
-          )),
+                ],
+              ))
+          : PreferredSize(
+              preferredSize: const Size.fromHeight(170),
+              child: Stack(
+                children: [
+                  Container(
+                    height: 120,
+                    color: AppColors.prussianBlue,
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        InkWell(
+                          onTap: () {},
+                          child: const Icon(
+                            Icons.light_mode,
+                            size: 30,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 20,
+                        )
+                      ],
+                    ),
+                  ),
+                  const Align(
+                    alignment: Alignment.bottomCenter,
+                    child: CircleAvatar(
+                      radius: 100,
+                      backgroundColor: Colors.white,
+                      child: CircleAvatar(
+                        backgroundImage:
+                            AssetImage('assets/images/profile.jpg'),
+                        radius: 90,
+                      ),
+                    ),
+                  ),
+                ],
+              )),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 20,
