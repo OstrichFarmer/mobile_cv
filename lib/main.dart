@@ -1,24 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_cv/google_navigation.dart';
 import 'package:mobile_cv/provider/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
+// ignore: use_key_in_widget_constructors
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  static const String title = 'Light & Dark Theme';
 
-  // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      themeMode: ThemeMode.system,
-      theme: MyThemes.lightTheme,
-      darkTheme: MyThemes.darkTheme,
-      title: 'Mobile CV',
-      debugShowCheckedModeBanner: false,
-      home: const GoogleNavBar(),
-    );
-  }
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+        create: (context) => ThemeProvider(),
+        builder: (context, _) {
+          final themeProvider = Provider.of<ThemeProvider>(context);
+
+          return MaterialApp(
+            title: title,
+            themeMode: themeProvider.themeMode,
+            theme: MyThemes.lightTheme,
+            darkTheme: MyThemes.darkTheme,
+            home: const GoogleNavBar(),
+          );
+        },
+      );
 }

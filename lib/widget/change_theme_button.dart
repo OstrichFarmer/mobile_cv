@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../provider/theme_provider.dart';
 
+// ignore: use_key_in_widget_constructors
 class ChangeThemeButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
