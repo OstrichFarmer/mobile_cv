@@ -21,8 +21,8 @@ class ExperienceScreen extends StatelessWidget {
         backgroundColor: AppColors.prussianBlue,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(12),
-              bottomRight: Radius.circular(12)),
+              bottomLeft: Radius.circular(15),
+              bottomRight: Radius.circular(15)),
         ),
       ),
       body: SingleChildScrollView(

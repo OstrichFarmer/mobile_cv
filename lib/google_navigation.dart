@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:mobile_cv/screens/education_screen.dart';
+import 'package:mobile_cv/screens/experience_screen.dart';
+import 'package:mobile_cv/screens/profile_screen.dart';
 import 'package:mobile_cv/utils/colors.dart';
 
 class GoogleNavBar extends StatefulWidget {
@@ -12,28 +15,39 @@ class GoogleNavBar extends StatefulWidget {
 
 class _GoogleNavBarState extends State<GoogleNavBar> {
   @override
-  int selectIndex = 0;
+  int _selectIndex = 0;
 
-  static final List<Widget> _NavScreen = <Widget>[];
+  static final List<Widget> _NavScreen = <Widget>[
+    const ProfileScreen(),
+    const EducationScreen(),
+    const ExperienceScreen(),
+  ];
 
   Widget build(BuildContext context) {
     return Scaffold(
+      body: _NavScreen.elementAt(_selectIndex),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-            color: Colors.grey,
+        decoration: const BoxDecoration(
+            color: AppColors.prussianBlue,
             borderRadius: BorderRadius.only(
                 topRight: Radius.circular(15), topLeft: Radius.circular(15))),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
           child: GNav(
             color: Colors.grey.shade800,
-            backgroundColor: Colors.grey,
+            backgroundColor: AppColors.prussianBlue,
             activeColor: AppColors.prussianBlue,
             tabBackgroundColor: AppColors.lightGrey,
-            padding: EdgeInsets.all(20),
-            tabMargin: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(20),
+            tabMargin: const EdgeInsets.all(5),
             gap: 9,
-            tabs: [
+            selectedIndex: _selectIndex,
+            onTabChange: (index) {
+              setState(() {
+                _selectIndex = index;
+              });
+            },
+            tabs: const [
               GButton(
                 icon: FontAwesomeIcons.solidUser,
                 text: 'Profile',
