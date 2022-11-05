@@ -8,7 +8,8 @@ class LanguageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar:  AppBar(
+    return Scaffold(
+      appBar: AppBar(
         centerTitle: true,
         title: Text(
           'Languages',
@@ -21,6 +22,7 @@ class LanguageScreen extends StatelessWidget {
               bottomLeft: Radius.circular(15),
               bottomRight: Radius.circular(15)),
         ),
-      ),,);
+      ),
+    );
   }
 }
