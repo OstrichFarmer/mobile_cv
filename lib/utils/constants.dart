@@ -8,4 +8,4 @@ final kExperiencetagTextStyle = GoogleFonts.aclonica(
 );
 
 final kAboutTextStyling =
-    GoogleFonts.lato(fontWeight: FontWeight.w400, fontSize: 16);
+    GoogleFonts.lato(fontWeight: FontWeight.w400, fontSize: 14);

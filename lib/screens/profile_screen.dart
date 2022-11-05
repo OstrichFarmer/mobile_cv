@@ -181,15 +181,15 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  children: [
-                    const Icon(Icons.mail),
-                    Text(
-                      'Joel.stephen56.sj@gmail.com',
-                      overflow: TextOverflow.ellipsis,
-                      style: kAboutTextStyling,
-                    ),
-                  ],
+              ],
+            ),
+            Row(
+              children: [
+                const Icon(Icons.mail),
+                Text(
+                  'Joel.stephen56.sj@gmail.com',
+                  overflow: TextOverflow.ellipsis,
+                  style: kAboutTextStyling,
                 ),
               ],
             ),
